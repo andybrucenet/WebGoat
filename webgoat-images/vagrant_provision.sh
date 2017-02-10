@@ -38,7 +38,7 @@ echo '*'
 echo "Provisioning Java 8..."
 mkdir -p /home/vagrant/java
 cd /home/vagrant/java
-test -f /tmp/jdk-8-linux-x64.tar.gz || curl -q -L --cookie "oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u101-b13/jdk-8u101-linux-x64.tar.gz -o /tmp/jdk-8-linux-x64.tar.gz
+test -f /tmp/jdk-8-linux-x64.tar.gz || curl -s -L --cookie "oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u101-b13/jdk-8u101-linux-x64.tar.gz -o /tmp/jdk-8-linux-x64.tar.gz
 
 sudo mkdir -p /usr/lib/jvm
 sudo tar zxf /tmp/jdk-8-linux-x64.tar.gz -C /usr/lib/jvm
